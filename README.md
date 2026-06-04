@@ -1,2 +1,2 @@
 
-[simonslenker667-droid.github.io](simonslenker667-droid.github.io)
+[Životopis](https://simonslenker667-droid.github.io/)
