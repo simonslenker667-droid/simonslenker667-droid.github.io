@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Životopis — Jméno Příjmení</title>
+  <style>
+    :root{--accent:#0b5fff;--muted:#666;--bg:#f7f9ff}
+    *{box-sizing:border-box}
+    body{font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; margin:0; color:#222}
+    .page{max-width:900px;margin:24px auto;background:#fff;display:grid;grid-template-columns:300px 1fr;gap:24px;padding:28px;border-radius:8px;box-shadow:0 6px 24px rgba(20,30,60,0.08)}
+    header{grid-column:1/-1;display:flex;justify-content:space-between;align-items:center}
+    .name{font-size:1.6rem;font-weight:700}
+    .title{color:var(--muted)}
+    .left{padding-right:8px;border-right:1px solid #eee}
+    .section{margin-bottom:16px}
+    .section h3{margin:0 0 8px 0;font-size:0.95rem;color:var(--accent)}
+    .muted{color:var(--muted);font-size:0.95rem}
+    ul{padding-left:16px;margin:0}
+    .skill{display:inline-block;background:#f1f6ff;color:var(--accent);padding:4px 8px;border-radius:999px;margin:4px 4px 0 0;font-size:0.82rem}
+    .exp{margin-bottom:12px}
+    .exp .role{font-weight:600}
+    .exp .meta{color:var(--muted);font-size:0.92rem}
+    .print-btn{border:0;background:var(--accent);color:#fff;padding:10px 14px;border-radius:6px;cursor:pointer}
+    @media (max-width:800px){.page{grid-template-columns:1fr;padding:18px} .left{border-right:none;border-bottom:1px solid #eee;padding-bottom:12px}}
+    @media print{body{background:#fff} .print-btn, .page{box-shadow:none} .page{max-width:100%;border-radius:0} }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <div>
+        <div class="name">Jméno Příjmení</div>
+        <div class="title">Pozice / Obor</div>
+      </div>
+      <div>
+        <button class="print-btn" onclick="window.print()">Tisk</button>
+      </div>
+    </header>
+
+    <aside class="left">
+      <div class="section">
+        <h3>Osobní údaje</h3>
+        <div class="muted">Adresa: Ulice 123, Město</div>
+        <div class="muted">Telefon: +420 123 456 789</div>
+        <div class="muted">Email: email@priklad.cz</div>
+        <div class="muted">Web: www.example.com</div>
+      </div>
+
+      <div class="section">
+        <h3>Dovednosti</h3>
+        <div>
+          <span class="skill">HTML</span><span class="skill">CSS</span><span class="skill">JavaScript</span>
+          <span class="skill">React</span><span class="skill">Node.js</span>
+        </div>
+      </div>
+
+      <div class="section">
+        <h3>Jazyky</h3>
+        <ul>
+          <li>Čeština — rodilý mluvčí</li>
+          <li>Angličtina — pokročilá (C1)</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h3>Další</h3>
+        <ul>
+          <li>Řidičský průkaz: B</li>
+          <li>Dostupnost: ihned</li>
+        </ul>
+      </div>
+    </aside>
+
+    <main>
+      <div class="section">
+        <h3>Profil</h3>
+        <p class="muted">Krátký souhrn (2–4 věty) představující vaši profesní identitu, hlavní zkušenosti a cíl.</p>
+      </div>
+
+      <div class="section">
+        <h3>Pracovní zkušenosti</h3>
+        <div class="exp">
+          <div class="role">Název pozice — Společnost</div>
+          <div class="meta">2021 — současnost · Město</div>
+          <div class="muted">Krátký popis odpovědností a dosažených výsledků. Vyjmenujte 3–5 bodů.</div>
+        </div>
+
+        <div class="exp">
+          <div class="role">Předchozí pozice — Společnost</div>
+          <div class="meta">2018 — 2021 · Město</div>
+          <div class="muted">Krátký popis práce a klíčové úspěchy.</div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h3>Vzdělání</h3>
+        <div class="exp">
+          <div class="role">Název oboru — Vysoká škola / Škola</div>
+          <div class="meta">2015 — 2018</div>
+          <div class="muted">Krátký popis, zaměření, diplomová práce (pokud relevantní).</div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h3>Certifikáty & školení</h3>
+        <ul>
+          <li>Název certifikátu — Rok</li>
+        </ul>
+      </div>
+    </main>
+  </div>
+
+</body>
+</html>
