@@ -3,30 +3,12 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Životopis — Jméno Příjmení</title>
-  <style>
-    :root{--accent:#0b5fff;--muted:#666;--bg:#f7f9ff}
-    *{box-sizing:border-box}
-    body{font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; margin:0; color:#222}
-    .page{max-width:900px;margin:24px auto;background:#fff;display:grid;grid-template-columns:300px 1fr;gap:24px;padding:28px;border-radius:8px;box-shadow:0 6px 24px rgba(20,30,60,0.08)}
-    header{grid-column:1/-1;display:flex;justify-content:space-between;align-items:center}
-    .name{font-size:1.6rem;font-weight:700}
-    .title{color:var(--muted)}
-    .left{padding-right:8px;border-right:1px solid #eee}
-    .section{margin-bottom:16px}
-    .section h3{margin:0 0 8px 0;font-size:0.95rem;color:var(--accent)}
-    .muted{color:var(--muted);font-size:0.95rem}
-    ul{padding-left:16px;margin:0}
-    .skill{display:inline-block;background:#f1f6ff;color:var(--accent);padding:4px 8px;border-radius:999px;margin:4px 4px 0 0;font-size:0.82rem}
-    .exp{margin-bottom:12px}
-    .exp .role{font-weight:600}
-    .exp .meta{color:var(--muted);font-size:0.92rem}
-    .print-btn{border:0;background:var(--accent);color:#fff;padding:10px 14px;border-radius:6px;cursor:pointer}
-    @media (max-width:800px){.page{grid-template-columns:1fr;padding:18px} .left{border-right:none;border-bottom:1px solid #eee;padding-bottom:12px}}
-    @media print{body{background:#fff} .print-btn, .page{box-shadow:none} .page{max-width:100%;border-radius:0} }
-  </style>
+  <title>Šimon Šlenker</title>
+  <link rel="stylesheet" href="styly.css" />
 </head>
 <body>
+
+
   <div class="page">
     <header>
       <div>
@@ -34,6 +16,7 @@
         <div class="title">Študent</div>
       </div>
       <div>
+        <a href="#contact" class="print-btn" style="text-decoration: none; display: inline-block; margin-right: 4px;">Kontakt</a>
         <button class="print-btn" onclick="window.print()">Tlačiť</button>
       </div>
     </header>
@@ -48,7 +31,7 @@
       </div>
 
       <div class="section">
-        <h3>Dovednosti</h3>
+        <h3>Znalosti</h3>
         <div>
           <span class="skill">HTML</span><span class="skill">CSS</span><span class="skill">Cisco (NetAcademy)</span>
           <span class="skill">Solidworks</span><span class="skill">Node.js</span>
@@ -73,7 +56,6 @@
     </aside>
 
     <main>
-
       <div class="section">
         <h3>Pracovné skúsenosti</h3>
         <div class="exp">
@@ -81,7 +63,7 @@
           <div class="meta">2025 — súčasnosť</div>
           <div class="muted">Dokladač a predavač.</div>
         </div>
-
+      </div> 
       <div class="section">
         <h3>Vzdelanie</h3>
 
@@ -93,9 +75,30 @@
         <div class="exp">
           <div class="role"> Cirkevná Základná škola Povýšenia sv. Kríža</div>
           <div class="meta">2015 — 2023</div>
-      </div>
-
+        </div> 
+      </div> 
     </main>
+  </div>
+
+  <br><br>
+
+  <div class="contact-form" id="contact">
+    <h2>Kontaktujte ma</h2>
+    <form action="https://formspree.io/f/mqeoagrb" method="POST">
+      <label>
+        Your email:
+        <input type="email" name="email">
+      </label>
+      <label>
+        Your message:
+        <textarea name="message"></textarea>
+      </label>
+      <button type="submit">Send</button>
+    </form>
+  </div>
+
+  <div style="text-align: center; margin: 24px 0;" class="contact-form-toggle-wrapper">
+    <label for="theme-toggle" class="print-btn mode-label">Tmavý režim</label>
   </div>
 
 </body>
